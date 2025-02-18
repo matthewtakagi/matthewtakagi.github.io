@@ -18,9 +18,9 @@ html {
 }
 
 body {
-	background: $black;
-  font: 18px/1.4 $helvetica;
-  color: $white;
+  background: #121212;
+  font: 18px/1.4 "Inter", sans-serif;
+  color: #E0E0E0;
 }
 
 .container {
@@ -31,9 +31,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  color: #BBBBBB;
+  font-weight: 600;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -61,7 +61,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: #888;
 }
 
 p {
@@ -69,11 +69,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: #64B5F6;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: #BBDEFB;
   }
 }
 
@@ -117,21 +117,20 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: #888;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: #121212;
+  background: #64B5F6;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: #121212;
+  background: #64B5F6;
 }
 
 // Nicolas Gallagher's micro clearfix hack
-// http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -146,17 +145,13 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 
-//
-// .masthead
-//
-
 .wrapper-masthead {
   margin-bottom: 50px;
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #333;
 
   @include mobile {
     text-align: center;
@@ -192,17 +187,17 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: #EEEEEE;
   cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 28px;
   letter-spacing: 1px;
 }
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: #BBBBBB;
   font-size: 16px;
 
   @include mobile {
@@ -212,8 +207,8 @@ img {
 
 nav {
   float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  margin-top: 23px;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
 
   @include mobile {
@@ -225,25 +220,21 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: #EEEEEE;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: #64B5F6;
     }
   }
 }
 
-//
-// .main
-//
-
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #333;
 }
 
 .posts > .post:last-child {
@@ -254,28 +245,19 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid #888;
     padding: 0.1em 1em;
-    color: $gray;
+    color: #BBBBBB;
     font-size: 22px;
     font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
   }
 }
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background-color: #1E1E1E;
 }
 
 footer {
@@ -283,7 +265,6 @@ footer {
   text-align: center;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
