@@ -1,0 +1,375 @@
+---
+import FlightRow from "@/components/FlightRow.astro"
+import { flights, type Flight } from "@/data/travel"
+
+import "maplibre-gl/dist/maplibre-gl.css"
+import "@/styles/map.css"
+
+const today = new Date().toISOString().slice(0, 10)
+const upcoming = flights
+  .filter((flight) => flight.date >= today)
+  .sort((a, b) => a.date.localeCompare(b.date) || a.code.localeCompare(b.code))
+const past = flights.filter((flight) => flight.date < today)
+const showUpcoming = upcoming.length > 0
+const pastByYear: { year: string; flights: Flight[] }[] = []
+for (const flight of past) {
+  const year = flight.date.slice(0, 4)
+  const group = pastByYear.at(-1)
+  if (!group || group.year !== year)
+    pastByYear.push({ year, flights: [flight] })
+  else group.flights.push(flight)
+}
+---
+
+<flight-section>
+  <div class="site-map" data-flight-map></div>
+  <div data-travel-list>
+  <ul data-legend>
+    <li><span data-swatch="upcoming"></span> Upcoming</li>
+    <li><span data-swatch="past"></span> Past</li>
+  </ul>
+  <div role="tablist" aria-label="Flights" data-tablist="section">
+    <button
+      type="button"
+      role="tab"
+      id="tab-upcoming"
+      aria-controls="panel-upcoming"
+      aria-selected={showUpcoming ? "true" : "false"}
+      tabindex={showUpcoming ? 0 : -1}
+    >
+      Upcoming
+    </button>
+    <button
+      type="button"
+      role="tab"
+      id="tab-past"
+      aria-controls="panel-past"
+      aria-selected={showUpcoming ? "false" : "true"}
+      tabindex={showUpcoming ? -1 : 0}
+    >
+      Past
+    </button>
+  </div>
+  <div
+    role="tabpanel"
+    id="panel-upcoming"
+    aria-labelledby="tab-upcoming"
+    hidden={!showUpcoming}
+  >
+    {
+      upcoming.length > 0 ? (
+        <ul>
+          {upcoming.map((flight) => (
+            <FlightRow flight={flight} />
+          ))}
+        </ul>
+      ) : (
+        <p data-empty>No upcoming flights.</p>
+      )
+    }
+  </div>
+  <div
+    role="tabpanel"
+    id="panel-past"
+    aria-labelledby="tab-past"
+    hidden={showUpcoming}
+  >
+    {
+      pastByYear.length > 0 && (
+        <div role="tablist" aria-label="Years" data-tablist="detail">
+          {pastByYear.map((group, index) => (
+            <button
+              type="button"
+              role="tab"
+              id={`tab-past-${group.year}`}
+              aria-controls={`panel-past-${group.year}`}
+              aria-selected={index === 0 ? "true" : "false"}
+              tabindex={index === 0 ? 0 : -1}
+            >
+              {group.year}
+            </button>
+          ))}
+        </div>
+      )
+    }
+    {
+      pastByYear.map((group, index) => (
+        <div
+          role="tabpanel"
+          id={`panel-past-${group.year}`}
+          aria-labelledby={`tab-past-${group.year}`}
+          hidden={index !== 0}
+        >
+          <ul>
+            {group.flights.map((flight) => (
+              <FlightRow flight={flight} />
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+  </div>
+</flight-section>
+
+<script>
+  import type { GeoJSONSource } from "maplibre-gl"
+  import { flights, type Flight } from "@/data/travel"
+  import { routeSegments } from "@/lib/geo"
+  import {
+    createSiteMap,
+    followTheme,
+    framePaths,
+    mapInk,
+    siteTheme,
+  } from "@/lib/site-map"
+
+  const byId = new Map(flights.map((flight) => [flight.id, flight]))
+  const today = new Date().toISOString().slice(0, 10)
+  const routeLayers = ["flights-upcoming", "flights-past"]
+
+  function routes() {
+    return {
+      type: "FeatureCollection" as const,
+      features: flights.flatMap((flight) =>
+        routeSegments([flight.from.coordinates, flight.to.coordinates]).map(
+          (segment) => ({
+            type: "Feature" as const,
+            properties: {
+              id: flight.id,
+              upcoming: flight.date >= today ? 1 : 0,
+            },
+            geometry: {
+              type: "LineString" as const,
+              coordinates: segment.map(([lat, lon]) => [lon, lat]),
+            },
+          }),
+        ),
+      ),
+    }
+  }
+
+  function mount(root: HTMLElement) {
+    const mapEl = root.querySelector<HTMLElement>("[data-flight-map]")
+    if (!mapEl || mapEl.dataset.ready) return
+    mapEl.dataset.ready = "true"
+
+    const map = createSiteMap(mapEl)
+    let selected: string | null = null
+    let ready = false
+    let framed = false
+
+    const reveal = () => {
+      if (!ready || mapEl.clientWidth === 0 || mapEl.clientHeight === 0) return
+      map.resize()
+      if (framed) return
+      framed = true
+      requestAnimationFrame(() => frameAll(false))
+    }
+
+    const paint = () => {
+      const ink = mapInk(siteTheme())
+      const data = routes()
+      const source = map.getSource("flights")
+      if (source?.type === "geojson") (source as GeoJSONSource).setData(data)
+      else map.addSource("flights", { type: "geojson", data })
+
+      const id = selected ?? ""
+      const paintLine = (layer: string, upcoming: boolean) => {
+        const color = upcoming ? ink.upcoming : ink.past
+        if (!map.getLayer(layer)) {
+          map.addLayer({
+            id: layer,
+            type: "line",
+            source: "flights",
+            filter: ["==", ["get", "upcoming"], upcoming ? 1 : 0],
+            layout: { "line-cap": "round", "line-join": "round" },
+            paint: { "line-color": color },
+          })
+        } else {
+          map.setPaintProperty(layer, "line-color", color)
+        }
+        map.setPaintProperty(layer, "line-width", [
+          "case",
+          ["==", ["get", "id"], id],
+          2.75,
+          1.15,
+        ])
+        map.setPaintProperty(layer, "line-opacity", [
+          "case",
+          ["==", ["get", "id"], id],
+          1,
+          id ? 0.16 : upcoming ? 0.95 : 0.55,
+        ])
+      }
+      paintLine("flights-past", false)
+      paintLine("flights-upcoming", true)
+    }
+
+    const frameAll = (animate: boolean) =>
+      framePaths(
+        map,
+        flights.map((flight) => [
+          flight.from.coordinates,
+          flight.to.coordinates,
+        ]),
+        animate,
+      )
+
+    const frameFlight = (flight: Flight) => {
+      const west = flight.from.coordinates[1]
+      const east = flight.to.coordinates[1]
+      if (Math.abs(west - east) > 180) {
+        framePaths(
+          map,
+          [[flight.from.coordinates, flight.to.coordinates]],
+          true,
+        )
+        return
+      }
+      map.fitBounds(
+        [
+          [
+            Math.min(west, east),
+            Math.min(flight.from.coordinates[0], flight.to.coordinates[0]),
+          ],
+          [
+            Math.max(west, east),
+            Math.max(flight.from.coordinates[0], flight.to.coordinates[0]),
+          ],
+        ],
+        { padding: 48, maxZoom: 6, duration: 700 },
+      )
+    }
+
+    const select = (id: string | null) => {
+      selected = selected === id ? null : id
+      let current: HTMLButtonElement | null = null
+      for (const button of root.querySelectorAll<HTMLButtonElement>(
+        "[data-flight]",
+      )) {
+        if (button.dataset.flight === selected) {
+          button.setAttribute("aria-current", "true")
+          current = button
+        } else button.removeAttribute("aria-current")
+      }
+      paint()
+      const flight = selected ? byId.get(selected) : undefined
+      if (flight) frameFlight(flight)
+      let panel = current?.closest<HTMLElement>('[role="tabpanel"]')
+      const hiddenPanels: HTMLElement[] = []
+      while (panel) {
+        if (panel.hidden) hiddenPanels.push(panel)
+        panel =
+          panel.parentElement?.closest<HTMLElement>('[role="tabpanel"]') ??
+          null
+      }
+      for (const hidden of hiddenPanels.reverse()) {
+        root
+          .querySelector<HTMLButtonElement>(`[aria-controls="${hidden.id}"]`)
+          ?.click()
+      }
+      if (current) {
+        requestAnimationFrame(() =>
+          current?.scrollIntoView({ block: "nearest" }),
+        )
+      }
+    }
+
+    map.on("load", () => {
+      ready = true
+      paint()
+      reveal()
+      map.on("click", (event) => {
+        const layers = routeLayers.filter((layer) => map.getLayer(layer))
+        if (layers.length === 0) return
+        const hit = map.queryRenderedFeatures(event.point, { layers })[0]
+        select(hit ? String(hit.properties?.id ?? "") : null)
+      })
+      map.on("mousemove", (event) => {
+        const layers = routeLayers.filter((layer) => map.getLayer(layer))
+        const hit = layers.length
+          ? map.queryRenderedFeatures(event.point, { layers })
+          : []
+        map.getCanvas().style.cursor = hit.length ? "pointer" : ""
+      })
+    })
+
+    followTheme(map, paint)
+    new ResizeObserver(reveal).observe(mapEl)
+
+    for (const button of root.querySelectorAll<HTMLButtonElement>(
+      "[data-flight]",
+    )) {
+      button.addEventListener("click", () =>
+        select(button.dataset.flight ?? null),
+      )
+    }
+  }
+
+  for (const root of document.querySelectorAll<HTMLElement>("flight-section"))
+    mount(root)
+</script>
+
+<style>
+  flight-section {
+    display: block;
+
+    @media (width >= 64rem) {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+  }
+
+  .site-map {
+    margin-block: var(--space-s) var(--space-2xs);
+
+    @media (width >= 64rem) {
+      margin: 0;
+    }
+  }
+
+  [data-legend] {
+    display: flex;
+    gap: var(--space-s);
+    margin: 0 0 var(--space-m);
+    padding: 0;
+    list-style: none;
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+  }
+
+  [data-swatch] {
+    width: 0.85rem;
+    height: 2px;
+    border-radius: var(--radius-full);
+  }
+
+  [data-swatch="upcoming"] {
+    background: light-dark(#8a4630, #e2b39a);
+  }
+
+  [data-swatch="past"] {
+    background: light-dark(#2f5674, #8eacc4);
+  }
+
+  [data-empty] {
+    margin: var(--space-s) 0 0;
+    color: var(--muted-foreground);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

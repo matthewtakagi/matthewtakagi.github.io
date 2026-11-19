@@ -1,0 +1,118 @@
+---
+import type { Flight, FlightEnd } from "@/data/travel"
+import { formatDate } from "@/lib/utils"
+
+type Props = { flight: Flight }
+
+const { flight } = Astro.props
+const when = formatDate(new Date(`${flight.date}T00:00:00Z`))
+// IATA airline codes are two characters (WN, B6, 7G). The rest is the number.
+const code = flight.code.match(/^(?:[A-Z][A-Z0-9]|[0-9][A-Z])(?=\d)/)?.[0] ?? ""
+const number = code ? flight.code.slice(code.length) : flight.code
+// Marks from soaring-symbols. A tail when that set has one, otherwise the icon or logo.
+const marks = new Set([
+  "3K",
+  "AA",
+  "AC",
+  "AF",
+  "AS",
+  "B6",
+  "BA",
+  "BR",
+  "BT",
+  "CX",
+  "DL",
+  "DY",
+  "F9",
+  "FI",
+  "JL",
+  "JX",
+  "KL",
+  "LH",
+  "LX",
+  "NH",
+  "NK",
+  "OS",
+  "SK",
+  "SQ",
+  "UA",
+  "VA",
+  "VS",
+  "WN",
+])
+const tail = marks.has(code) ? `/tails/${code}.svg` : ""
+
+const end = (place: FlightEnd) => `${place.city} (${place.iata})`
+const from = end(flight.from)
+const to = end(flight.to)
+---
+
+<li>
+  <button type="button" data-flight={flight.id}>
+    <time datetime={flight.date}>{when}</time>
+    <span data-airline>
+      {
+        tail && (
+          <img src={tail} alt="" width="28" height="22" data-tail />
+        )
+      }
+      <span>
+        {flight.airline} {number}
+        {flight.aircraft && <> · {flight.aircraft}</>}
+      </span>
+    </span>
+    <span data-route>
+      <span>{from}</span>
+      <span aria-hidden="true">→</span>
+      <span>{to}</span>
+    </span>
+  </button>
+</li>
+
+<style>
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.05rem;
+    width: 100%;
+    padding: 0.55rem 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    line-height: 1.35;
+    text-align: start;
+    color: var(--foreground);
+    cursor: pointer;
+
+    time {
+      color: var(--muted-foreground);
+      font-size: var(--step--1);
+    }
+
+    [data-airline] {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    [data-tail] {
+      display: block;
+      width: 1.15rem;
+      height: 1.15rem;
+      flex: none;
+      object-fit: contain;
+    }
+
+    [data-route] {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 0.4rem;
+    }
+  }
+
+  button[aria-current="true"] [data-route] {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+</style>

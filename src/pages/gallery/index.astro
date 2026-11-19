@@ -1,0 +1,302 @@
+---
+import { Image } from "astro:assets"
+import { getCollection } from "astro:content"
+import MetaPage from "@/components/MetaPage.astro"
+import Layout from "@/layouts/Layout.astro"
+import { formatDate } from "@/lib/utils"
+
+const photos = (await getCollection("gallery")).sort((a, b) => {
+  const left = a.data.date?.getTime() ?? 0
+  const right = b.data.date?.getTime() ?? 0
+  return right - left || a.data.caption.localeCompare(b.data.caption)
+})
+const tags = [
+  ...new Set(photos.flatMap((photo) => photo.data.tags ?? [])),
+].sort((a, b) => a.localeCompare(b))
+---
+
+<Layout wide>
+  <MetaPage
+    slot="head"
+    title="Gallery"
+    description="Photos, with a caption, a category, and sometimes a place."
+  />
+  {
+    photos.length === 0 ? (
+      <p data-empty>No photos yet.</p>
+    ) : (
+      <gallery-board>
+        {tags.length > 0 && (
+          <div role="group" aria-label="Categories" data-filters>
+            <button type="button" data-tag="all" aria-pressed="true">
+              All
+            </button>
+            {tags.map((tag) => (
+              <button type="button" data-tag={tag} aria-pressed="false">
+                {tag}
+              </button>
+            ))}
+          </div>
+        )}
+        <ul data-masonry>
+          {photos.map((photo) => {
+            const { caption, location, tags: photoTags, alt, image, date } =
+              photo.data
+            const label = alt || caption
+            const when = date ? formatDate(date) : ""
+            const detail = [when, location].filter(Boolean).join(" · ")
+            return (
+              <li data-photo data-tags={JSON.stringify(photoTags ?? [])}>
+                <div data-card>
+                  <button
+                    type="button"
+                    data-open
+                    aria-label={`View larger: ${caption}`}
+                    data-src={image.src}
+                    data-alt={label}
+                    data-caption={caption}
+                    data-detail={detail}
+                  >
+                    <Image
+                      src={image}
+                      alt={label}
+                      widths={[480, 960, 1600]}
+                      sizes="(min-width: 64rem) 22rem, (min-width: 36rem) 45vw, 100vw"
+                    />
+                  </button>
+                  <p data-caption>{caption}</p>
+                  {detail && <p data-meta>{detail}</p>}
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+        <p data-empty hidden>
+          No photos in this category.
+        </p>
+        <dialog>
+          <form method="dialog">
+            <button type="submit">Close</button>
+          </form>
+          <img alt="" />
+          <p data-dialog-caption></p>
+          <p data-dialog-meta hidden></p>
+        </dialog>
+      </gallery-board>
+    )
+  }
+</Layout>
+
+<script>
+  function mount(root: HTMLElement) {
+    if (root.dataset.ready) return
+    root.dataset.ready = "true"
+
+    const list = root.querySelector<HTMLElement>("[data-masonry]")
+    const filters = [
+      ...root.querySelectorAll<HTMLButtonElement>("[data-tag]"),
+    ]
+    const items = [...root.querySelectorAll<HTMLElement>("[data-photo]")]
+    const empty = root.querySelector<HTMLElement>("[data-empty]")
+
+    const layout = () => {
+      if (!list) return
+      for (const item of items) {
+        const card = item.querySelector<HTMLElement>("[data-card]")
+        if (!card || item.hidden) {
+          item.style.gridRowEnd = ""
+          continue
+        }
+        item.style.gridRowEnd = `span ${Math.ceil(card.getBoundingClientRect().height)}`
+      }
+    }
+
+    const apply = (tag: string) => {
+      let shown = 0
+      for (const item of items) {
+        const tags = JSON.parse(item.dataset.tags || "[]") as string[]
+        const match = tag === "all" || tags.includes(tag)
+        item.hidden = !match
+        if (match) shown += 1
+      }
+      if (empty) empty.hidden = shown > 0
+      for (const button of filters) {
+        button.setAttribute(
+          "aria-pressed",
+          button.dataset.tag === tag ? "true" : "false",
+        )
+      }
+      layout()
+    }
+
+    for (const button of filters) {
+      button.addEventListener("click", () => apply(button.dataset.tag || "all"))
+    }
+
+    if (list) {
+      const observer = new ResizeObserver(layout)
+      for (const card of list.querySelectorAll<HTMLElement>("[data-card]"))
+        observer.observe(card)
+      layout()
+    }
+
+    const dialog = root.querySelector("dialog")
+    const picture = dialog?.querySelector("img")
+    const caption = dialog?.querySelector("[data-dialog-caption]")
+    const meta = dialog?.querySelector<HTMLElement>("[data-dialog-meta]")
+    if (!dialog || !picture || !caption || !meta) return
+
+    for (const button of root.querySelectorAll<HTMLButtonElement>(
+      "[data-open]",
+    )) {
+      button.addEventListener("click", () => {
+        picture.src = button.dataset.src || ""
+        picture.alt = button.dataset.alt || ""
+        caption.textContent = button.dataset.caption || ""
+        meta.textContent = button.dataset.detail || ""
+        meta.hidden = !button.dataset.detail
+        dialog.showModal()
+      })
+    }
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close()
+    })
+  }
+
+  for (const root of document.querySelectorAll<HTMLElement>("gallery-board"))
+    mount(root)
+</script>
+
+<style>
+  gallery-board {
+    display: block;
+  }
+
+  [data-empty] {
+    margin: var(--space-s) 0 0;
+    color: var(--muted-foreground);
+  }
+
+  [data-filters] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem var(--space-s);
+    margin: 0 0 var(--space-m);
+    border-bottom: 1px solid var(--border);
+
+    button {
+      margin: 0 0 -1px;
+      padding: 0.15rem 0 0.4rem;
+      border: 0;
+      border-bottom: 2px solid transparent;
+      background: none;
+      font: inherit;
+      font-size: var(--step--1);
+      color: var(--muted-foreground);
+      cursor: pointer;
+
+      &[aria-pressed="true"] {
+        color: var(--foreground);
+        border-bottom-color: var(--foreground);
+      }
+    }
+  }
+
+  [data-masonry] {
+    display: grid;
+    grid-auto-rows: 1px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+    margin: 0;
+    padding: 0;
+    column-gap: var(--space-s);
+    list-style: none;
+  }
+
+  [data-card] {
+    padding-bottom: var(--space-m);
+  }
+
+  [data-open] {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: var(--muted);
+    cursor: zoom-in;
+
+    :global(img) {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  [data-caption] {
+    margin: 0.45rem 0 0;
+    font-size: var(--step--1);
+    line-height: 1.4;
+  }
+
+  [data-meta] {
+    margin: 0.2rem 0 0;
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+    line-height: 1.3;
+  }
+
+  dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(42rem, calc(100vw - 2rem));
+    max-height: calc(100svh - 2rem);
+    margin: 0;
+    padding: var(--space-s);
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--foreground);
+
+    &::backdrop {
+      background: color-mix(in oklab, black 55%, transparent);
+    }
+
+    form {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    form button {
+      padding: 0;
+      border: 0;
+      background: none;
+      font: inherit;
+      font-size: var(--step--1);
+      color: var(--muted-foreground);
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: calc(100svh - 8rem);
+      height: auto;
+      margin-block: var(--space-2xs);
+      margin-inline: auto;
+      object-fit: contain;
+    }
+
+    p {
+      margin: 0;
+      font-size: var(--step--1);
+    }
+  }
+
+  [data-dialog-meta] {
+    margin-top: 0.3rem;
+    color: var(--muted-foreground);
+  }
+</style>

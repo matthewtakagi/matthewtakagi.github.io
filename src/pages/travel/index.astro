@@ -1,0 +1,94 @@
+---
+import BeenSection from "@/components/BeenSection.astro"
+import FlightSection from "@/components/FlightSection.astro"
+import MetaPage from "@/components/MetaPage.astro"
+import Layout from "@/layouts/Layout.astro"
+
+import "@/styles/tabs.css"
+---
+
+<Layout wide>
+  <MetaPage
+    slot="head"
+    title="Travel"
+    description="Flights, and the cities, hotels, and restaurants along the way."
+  />
+  <travel-page>
+  <div role="tablist" aria-label="Travel" data-tablist="page">
+    <button
+      type="button"
+      role="tab"
+      id="tab-been"
+      aria-controls="panel-been"
+      aria-selected="true"
+    >
+      Where I've been
+    </button>
+    <button
+      type="button"
+      role="tab"
+      id="tab-flights"
+      aria-controls="panel-flights"
+      aria-selected="false"
+      tabindex="-1"
+    >
+      Flights
+    </button>
+  </div>
+  <div role="tabpanel" id="panel-been" aria-labelledby="tab-been">
+    <BeenSection />
+  </div>
+  <div role="tabpanel" id="panel-flights" aria-labelledby="tab-flights" hidden>
+    <FlightSection />
+  </div>
+  </travel-page>
+</Layout>
+
+<script>
+  import { bindTabs } from "@/lib/tabs"
+
+  for (const list of document.querySelectorAll<HTMLElement>("[data-tablist]"))
+    bindTabs(list)
+</script>
+
+<style>
+  @media (width >= 64rem) {
+    travel-page {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+      grid-template-rows: auto 1fr;
+      column-gap: var(--grid-gutter);
+      align-items: start;
+    }
+
+    travel-page > [role="tablist"] {
+      position: relative;
+      z-index: 1;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    travel-page > [role="tabpanel"]:not([hidden]) {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+
+    travel-page :global(.site-map) {
+      grid-column: 2;
+      grid-row: 1 / -1;
+      position: sticky;
+      top: var(--space-s);
+      height: calc(100svh - var(--page-offset-top) - var(--space-l));
+      margin: 0;
+    }
+
+    travel-page :global([data-travel-list]) {
+      grid-column: 1;
+      grid-row: 2;
+      min-width: 0;
+    }
+  }
+</style>

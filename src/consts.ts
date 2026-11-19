@@ -2,11 +2,10 @@ import type { SvgComponent } from "astro/types"
 import Email from "@/assets/icons/email.svg"
 import GitHub from "@/assets/icons/github.svg"
 import RSS from "@/assets/icons/rss.svg"
-import Twitter from "@/assets/icons/twitter.svg"
 
 export const SITE = {
   title: "Matt Takagi",
-  description: "Matt's personal website, derived from the MIT-licensed astro-erudite template",
+  description: "Projects, writing, photos, and travel.",
   locale: "en-US",
   dir: "ltr",
   defaultPageImage: "/static/opengraph-image.png",
@@ -14,14 +13,14 @@ export const SITE = {
 } as const
 
 export const NAVIGATION = [
-  { href: "/blog", label: "Blog" },
   { href: "/projects", label: "Projects" },
-  { href: "/authors", label: "Authors" },
+  { href: "/blog", label: "Blog" },
+  { href: "/travel", label: "Travel" },
+  { href: "/gallery", label: "Gallery" },
 ]
 
 export const SOCIALS: { href: string; label: string; icon: SvgComponent }[] = [
   { href: "https://github.com/matthewtakagi", label: "GitHub", icon: GitHub },
-  { href: "https://twitter.com/enscrbe", label: "Twitter", icon: Twitter },
   { href: "mailto:mattaka@berkeley.edu", label: "Email", icon: Email },
   { href: "/rss.xml", label: "RSS", icon: RSS },
 ]

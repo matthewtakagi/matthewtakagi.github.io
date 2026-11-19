@@ -1,0 +1,46 @@
+.site-map {
+  height: clamp(18rem, 52svh, 30rem);
+  border: 1px solid var(--border);
+  background: var(--muted);
+}
+
+.site-map .maplibregl-ctrl-logo {
+  display: none;
+}
+
+.site-map .maplibregl-ctrl-attrib {
+  font-family: inherit;
+  font-size: 0.6875rem;
+  background: color-mix(in oklab, var(--background) 88%, transparent);
+  color: var(--muted-foreground);
+}
+
+.site-map .maplibregl-ctrl-attrib a {
+  color: inherit;
+}
+
+.site-map .maplibregl-ctrl-group {
+  background: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.site-map .maplibregl-ctrl-group button {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: var(--background);
+}
+
+.site-map .maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--border);
+}
+
+:root[data-theme="dark"] .site-map .maplibregl-ctrl-group button {
+  filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .site-map .maplibregl-ctrl-group button {
+    filter: invert(1);
+  }
+}

@@ -1,0 +1,103 @@
+---
+import type { City } from "@/data/travel"
+import { PLACE_GROUPS, places } from "@/data/places"
+
+type Props = { cities: City[] }
+
+const { cities } = Astro.props
+const byName = (name: string) =>
+  PLACE_GROUPS.map((group) => ({
+    ...group,
+    places: places.filter(
+      (place) => place.kind === group.kind && place.city === name,
+    ),
+  })).filter((group) => group.places.length > 0)
+---
+
+<ul>
+  {
+    cities.map((city) => (
+      <li>
+        <button type="button" data-city={city.id}>
+          <span>{city.name}</span>
+        </button>
+      </li>
+    ))
+  }
+</ul>
+{
+  cities.map((city) => {
+    const groups = byName(city.name)
+    if (groups.length === 0) return null
+    return (
+      <div data-city-places={city.id} hidden>
+        {groups.map((group) => (
+          <div>
+            <h3>{group.label}</h3>
+            <ul data-stops>
+              {group.places.map((place) => (
+                <li>
+                  <button type="button" data-place={place.slug}>
+                    <span>{place.name}</span>
+                    {place.note && <small>{place.note}</small>}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    )
+  })
+}
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+    gap: 0 var(--space-s);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  [data-stops] {
+    display: block;
+  }
+
+  [data-city-places] {
+    margin-top: var(--space-s);
+  }
+
+  h3 {
+    margin: var(--space-s) 0 var(--space-2xs);
+    font-size: var(--step-0);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--leading-offset) + 1em);
+    color: var(--foreground);
+  }
+
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0.35rem 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    text-align: start;
+    color: var(--foreground);
+    cursor: pointer;
+
+    small {
+      color: var(--muted-foreground);
+      font-size: var(--step--1);
+    }
+
+    &[aria-current="true"] span {
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+  }
+</style>

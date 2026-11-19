@@ -1,0 +1,440 @@
+---
+import CityStops from "@/components/CityStops.astro"
+import { CONTINENTS, locate } from "@/data/regions"
+import { cities } from "@/data/travel"
+
+import "maplibre-gl/dist/maplibre-gl.css"
+import "@/styles/map.css"
+
+const slug = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+
+const located = cities.map((city) => ({
+  ...city,
+  continent: locate(city),
+}))
+
+const continents = CONTINENTS.map((name) => {
+  const inContinent = located.filter((city) => city.continent === name)
+  const countries = [...new Set(inContinent.map((city) => city.country))]
+    .map((country) => {
+      const inCountry = inContinent.filter((city) => city.country === country)
+      return {
+        name: country,
+        code: inCountry[0].countryCode,
+        count: inCountry.length,
+        cities: inCountry.sort((a, b) => a.name.localeCompare(b.name)),
+      }
+    })
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+  return { name, count: inContinent.length, countries }
+}).filter((continent) => continent.count > 0)
+
+const continentId = (name: string) => `been-continent-${slug(name)}`
+const countryId = (code: string) => `been-country-${code.toLowerCase()}`
+---
+
+<been-section>
+  <div class="site-map" data-been-map></div>
+  <div data-travel-list>
+  <div role="tablist" aria-label="Continents" data-tablist="section">
+    {
+      continents.map((continent, index) => (
+        <button
+          type="button"
+          role="tab"
+          id={`${continentId(continent.name)}-tab`}
+          aria-controls={continentId(continent.name)}
+          aria-selected={index === 0 ? "true" : "false"}
+          tabindex={index === 0 ? 0 : -1}
+        >
+          {continent.name}
+        </button>
+      ))
+    }
+  </div>
+  {
+    continents.map((continent, continentIndex) => (
+      <div
+        role="tabpanel"
+        id={continentId(continent.name)}
+        aria-labelledby={`${continentId(continent.name)}-tab`}
+        hidden={continentIndex !== 0}
+      >
+        <div role="tablist" aria-label="Countries" data-tablist="section">
+          {continent.countries.map((country, index) => (
+            <button
+              type="button"
+              role="tab"
+              id={`${countryId(country.code)}-tab`}
+              aria-controls={countryId(country.code)}
+              aria-selected={index === 0 ? "true" : "false"}
+              tabindex={index === 0 ? 0 : -1}
+            >
+              {country.name}
+            </button>
+          ))}
+        </div>
+        {continent.countries.map((country, countryIndex) => (
+          <div
+            role="tabpanel"
+            id={countryId(country.code)}
+            aria-labelledby={`${countryId(country.code)}-tab`}
+            hidden={countryIndex !== 0}
+          >
+            <CityStops cities={country.cities} />
+          </div>
+        ))}
+      </div>
+    ))
+  }
+  </div>
+</been-section>
+
+<script>
+  import type { GeoJSONSource } from "maplibre-gl"
+  import type { FeatureCollection, Geometry } from "geojson"
+  import boundaries from "@/data/city-boundaries.json"
+  import { cities } from "@/data/travel"
+  import { places } from "@/data/places"
+  import {
+    createSiteMap,
+    followTheme,
+    framePaths,
+    mapInk,
+    siteTheme,
+  } from "@/lib/site-map"
+
+  const outlines = boundaries as FeatureCollection
+  const cityById = new Map(cities.map((city) => [city.id, city]))
+  const cityIdByName = new Map(cities.map((city) => [city.name, city.id]))
+  const placeById = new Map(places.map((place) => [place.slug, place]))
+
+  function placeFeatures() {
+    return {
+      type: "FeatureCollection" as const,
+      features: places.map((place) => ({
+        type: "Feature" as const,
+        properties: { id: place.slug, kind: place.kind, name: place.name },
+        geometry: {
+          type: "Point" as const,
+          coordinates: [place.coordinates[1], place.coordinates[0]],
+        },
+      })),
+    }
+  }
+
+  function bbox(geometry: Geometry) {
+    let minLon = 180
+    let maxLon = -180
+    let minLat = 90
+    let maxLat = -90
+    const walk = (value: unknown) => {
+      if (!Array.isArray(value)) return
+      if (typeof value[0] === "number") {
+        minLon = Math.min(minLon, value[0])
+        maxLon = Math.max(maxLon, value[0])
+        minLat = Math.min(minLat, value[1])
+        maxLat = Math.max(maxLat, value[1])
+        return
+      }
+      for (const child of value) walk(child)
+    }
+    walk(geometry.coordinates)
+    const southwest: [number, number] = [minLon, minLat]
+    const northeast: [number, number] = [maxLon, maxLat]
+    return [southwest, northeast] as const
+  }
+
+  function mount(root: HTMLElement) {
+    const mapEl = root.querySelector<HTMLElement>("[data-been-map]")
+    if (!mapEl || mapEl.dataset.ready) return
+    mapEl.dataset.ready = "true"
+
+    const map = createSiteMap(mapEl)
+    let selectedCity: string | null = null
+    let selectedPlace: string | null = null
+    let ready = false
+    let framed = false
+
+    const reveal = () => {
+      if (!ready || mapEl.clientWidth === 0 || mapEl.clientHeight === 0) return
+      map.resize()
+      if (framed) return
+      framed = true
+      requestAnimationFrame(() => frameAll(false))
+    }
+
+    const showPlaces = (cityId: string | null) => {
+      for (const panel of root.querySelectorAll<HTMLElement>(
+        "[data-city-places]",
+      )) {
+        panel.hidden = panel.dataset.cityPlaces !== cityId
+      }
+    }
+
+    const paint = () => {
+      const ink = mapInk(siteTheme())
+      const citySource = map.getSource("cities")
+      if (citySource?.type === "geojson")
+        (citySource as GeoJSONSource).setData(outlines)
+      else map.addSource("cities", { type: "geojson", data: outlines })
+
+      const pins = placeFeatures()
+      const pinSource = map.getSource("places")
+      if (pinSource?.type === "geojson")
+        (pinSource as GeoJSONSource).setData(pins)
+      else map.addSource("places", { type: "geojson", data: pins })
+
+      const cityId = selectedCity ?? ""
+      if (!map.getLayer("city-fill")) {
+        map.addLayer({
+          id: "city-fill",
+          type: "fill",
+          source: "cities",
+          paint: { "fill-color": ink.city },
+        })
+        map.addLayer({
+          id: "city-line",
+          type: "line",
+          source: "cities",
+          paint: { "line-color": ink.cityLine },
+        })
+      }
+      map.setPaintProperty("city-fill", "fill-color", ink.city)
+      map.setPaintProperty("city-fill", "fill-opacity", [
+        "case",
+        ["==", ["get", "id"], cityId],
+        0.5,
+        0.28,
+      ])
+      map.setPaintProperty("city-line", "line-color", ink.cityLine)
+      map.setPaintProperty("city-line", "line-width", [
+        "case",
+        ["==", ["get", "id"], cityId],
+        1.75,
+        0.8,
+      ])
+
+      map.setFilter("city-fill", null)
+      map.setFilter("city-line", null)
+      if (!map.getLayer("place-pins")) {
+        map.addLayer({
+          id: "place-pins",
+          type: "circle",
+          source: "places",
+          paint: {
+            "circle-color": ink.place,
+            "circle-stroke-color": ink.pinStroke,
+            "circle-stroke-width": 1.5,
+          },
+        })
+      }
+      map.setFilter("place-pins", null)
+      const placeId = selectedPlace ?? ""
+      map.setPaintProperty("place-pins", "circle-radius", [
+        "case",
+        ["==", ["get", "id"], placeId],
+        7,
+        5,
+      ])
+      map.setPaintProperty("place-pins", "circle-color", [
+        "match",
+        ["get", "kind"],
+        "hotel",
+        ink.hotel,
+        "restaurant",
+        ink.restaurant,
+        ink.place,
+      ])
+      map.setPaintProperty("place-pins", "circle-stroke-color", ink.pinStroke)
+    }
+
+    const mark = (attribute: "data-city" | "data-place", id: string | null) => {
+      for (const button of root.querySelectorAll<HTMLButtonElement>(
+        `[${attribute}]`,
+      )) {
+        const value = button.getAttribute(attribute)
+        if (id && value === id) button.setAttribute("aria-current", "true")
+        else button.removeAttribute("aria-current")
+      }
+    }
+
+    const showCity = (id: string) => {
+      const feature = outlines.features.find(
+        (item) => item.properties?.id === id,
+      )
+      if (feature) {
+        map.fitBounds(bbox(feature.geometry), {
+          padding: 32,
+          maxZoom: 11,
+          duration: 700,
+        })
+        return
+      }
+      const city = cityById.get(id)
+      if (city) {
+        map.easeTo({
+          center: [city.coordinates[1], city.coordinates[0]],
+          zoom: 10,
+          duration: 700,
+        })
+      }
+    }
+
+    const selectCity = (id: string | null) => {
+      selectedPlace = null
+      selectedCity = selectedCity === id ? null : id
+      mark("data-place", null)
+      mark("data-city", selectedCity)
+      showPlaces(selectedCity)
+      paint()
+      if (selectedCity) showCity(selectedCity)
+      else frameAll(true)
+    }
+
+    const selectPlace = (id: string | null) => {
+      const next = selectedPlace === id ? null : id
+      const place = next ? placeById.get(next) : undefined
+      const cityId = place ? cityIdByName.get(place.city) : undefined
+      selectedPlace = next
+      if (cityId) selectedCity = cityId
+      mark("data-city", selectedCity)
+      mark("data-place", selectedPlace)
+      showPlaces(selectedCity)
+      paint()
+      if (place) {
+        map.easeTo({
+          center: [place.coordinates[1], place.coordinates[0]],
+          zoom: 13,
+          duration: 700,
+        })
+        return
+      }
+      if (selectedCity) showCity(selectedCity)
+    }
+
+    const frameAll = (animate: boolean) => {
+      if (!map.isStyleLoaded() || mapEl.clientWidth === 0) return
+      const features = outlines.features
+      const points = cities.map((city) => [city.coordinates])
+      if (features.length === 0) {
+        if (points.length > 0) framePaths(map, points, animate)
+        return
+      }
+      let minLon = 180
+      let maxLon = -180
+      let minLat = 90
+      let maxLat = -90
+      for (const feature of features) {
+        const [[west, south], [east, north]] = bbox(feature.geometry)
+        minLon = Math.min(minLon, west)
+        maxLon = Math.max(maxLon, east)
+        minLat = Math.min(minLat, south)
+        maxLat = Math.max(maxLat, north)
+      }
+      if (maxLon - minLon > 180) {
+        framePaths(map, points, animate)
+        return
+      }
+      map.fitBounds(
+        [
+          [minLon, minLat],
+          [maxLon, maxLat],
+        ],
+        { padding: 36, maxZoom: 7, duration: animate ? 700 : 0 },
+      )
+    }
+
+    map.on("load", () => {
+      ready = true
+      paint()
+      reveal()
+      map.on("click", (event) => {
+        if (map.getLayer("place-pins")) {
+          const pin = map.queryRenderedFeatures(event.point, {
+            layers: ["place-pins"],
+          })[0]
+          if (pin?.properties?.id) {
+            selectPlace(String(pin.properties.id))
+            return
+          }
+        }
+        if (!map.getLayer("city-fill")) return
+        const city = map.queryRenderedFeatures(event.point, {
+          layers: ["city-fill"],
+        })[0]
+        selectCity(city?.properties?.id ? String(city.properties.id) : null)
+      })
+      map.on("mousemove", (event) => {
+        const layers = ["place-pins", "city-fill"].filter((id) =>
+          map.getLayer(id),
+        )
+        const hit = layers.length
+          ? map.queryRenderedFeatures(event.point, { layers })
+          : []
+        map.getCanvas().style.cursor = hit.length ? "pointer" : ""
+      })
+    })
+
+    followTheme(map, paint)
+    new ResizeObserver(reveal).observe(mapEl)
+
+    for (const button of root.querySelectorAll<HTMLButtonElement>(
+      "[data-city]",
+    )) {
+      button.addEventListener("click", () =>
+        selectCity(button.dataset.city ?? null),
+      )
+    }
+    for (const button of root.querySelectorAll<HTMLButtonElement>(
+      "[data-place]",
+    )) {
+      button.addEventListener("click", () =>
+        selectPlace(button.dataset.place ?? null),
+      )
+    }
+
+    root.addEventListener("click", (event) => {
+      const tab = (event.target as Element | null)?.closest('[role="tab"]')
+      if (!tab || !root.contains(tab)) return
+      selectedCity = null
+      selectedPlace = null
+      mark("data-city", null)
+      mark("data-place", null)
+      showPlaces(null)
+      if (!map.isStyleLoaded()) return
+      paint()
+    })
+  }
+
+  for (const root of document.querySelectorAll<HTMLElement>("been-section"))
+    mount(root)
+</script>
+
+<style>
+  been-section {
+    display: block;
+
+    @media (width >= 64rem) {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+  }
+
+  .site-map {
+    margin-block: var(--space-s) var(--space-s);
+
+    @media (width >= 64rem) {
+      margin: 0;
+    }
+  }
+</style>

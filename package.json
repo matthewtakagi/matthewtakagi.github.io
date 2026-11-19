@@ -10,6 +10,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "import:flighty": "bun scripts/import-flighty.ts",
+    "import:cities": "bun scripts/import-cities.ts",
     "format": "biome format --write .",
     "format:check": "biome format ."
   },
@@ -24,6 +26,7 @@
     "hast-util-select": "^6.0.4",
     "hast-util-to-html": "^9.0.5",
     "hastscript": "^9.0.1",
+    "maplibre-gl": "^6.19.0",
     "satteri-expressive-code": "^0.1.15",
     "temml": "^0.13.3"
   },

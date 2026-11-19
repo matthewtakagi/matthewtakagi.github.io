@@ -15,11 +15,11 @@ export default defineConfig({
   site: "https://matthewtakagi.github.io",
   compressHTML: true,
   prefetch: { prefetchAll: true },
+  redirects: { "/maps": "/travel" },
   integrations: [
     sitemap({
       filter: (page) =>
         !/\/blog\/[^/]+\/[^/]+\/?$/.test(page) &&
-        !/\/authors\/[^/]+\/?$/.test(page) &&
         !page.includes("/tags/"),
     }),
   ],

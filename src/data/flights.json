@@ -1,0 +1,4352 @@
+[
+  {
+    "id": "2a48cd07-8ebe-4e76-a59f-8e647b6df8fe",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2027-03-27",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "3d00fe38-683e-4e95-91e6-c953199e5569",
+    "code": "HD20",
+    "airline": "Air Do",
+    "aircraft": "B763",
+    "date": "2027-03-26",
+    "from": {
+      "iata": "CTS",
+      "name": "New Chitose",
+      "city": "Sapporo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        42.790000915527344,
+        141.67999267578125
+      ]
+    },
+    "to": {
+      "iata": "HND",
+      "name": "Tokyo Haneda Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.54999923706055,
+        139.77999877929688
+      ]
+    },
+    "distanceKm": 821
+  },
+  {
+    "id": "cc2291e9-33de-411b-81ff-6e70e6c879c9",
+    "code": "JL3403",
+    "airline": "Japan Airlines",
+    "aircraft": "B738",
+    "date": "2027-03-24",
+    "from": {
+      "iata": "HIJ",
+      "name": "Hiroshima",
+      "city": "Hiroshima",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        34.439998626708984,
+        132.9199981689453
+      ]
+    },
+    "to": {
+      "iata": "CTS",
+      "name": "New Chitose",
+      "city": "Sapporo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        42.790000915527344,
+        141.67999267578125
+      ]
+    },
+    "distanceKm": 1199
+  },
+  {
+    "id": "51e2db50-8954-47ee-adc1-a06df3469f39",
+    "code": "JX820",
+    "airline": "Starlux Airlines",
+    "aircraft": "A359",
+    "date": "2027-03-20",
+    "from": {
+      "iata": "TPE",
+      "name": "Taipei-Taiwan Taoyuan Intl.",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "coordinates": [
+        25.079999923706055,
+        121.2300033569336
+      ]
+    },
+    "to": {
+      "iata": "KIX",
+      "name": "Kansai Intl.",
+      "city": "Osaka",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        34.439998626708984,
+        135.24000549316406
+      ]
+    },
+    "distanceKm": 1703
+  },
+  {
+    "id": "838c6788-fc01-434d-9626-1936a6e1481d",
+    "code": "JX11",
+    "airline": "Starlux Airlines",
+    "aircraft": "A359",
+    "date": "2027-03-19",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "TPE",
+      "name": "Taipei-Taiwan Taoyuan Intl.",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "coordinates": [
+        25.079999923706055,
+        121.2300033569336
+      ]
+    },
+    "distanceKm": 10390
+  },
+  {
+    "id": "43e040ae-7da0-4246-8892-366cbd0488f4",
+    "code": "KL601",
+    "airline": "KLM",
+    "aircraft": "B77W",
+    "date": "2027-01-17",
+    "from": {
+      "iata": "AMS",
+      "name": "Amsterdam Schiphol",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "coordinates": [
+        52.310001373291016,
+        4.760000228881836
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8956
+  },
+  {
+    "id": "65f43344-b47f-4a08-b52b-ef88baad63ea",
+    "code": "OU450",
+    "airline": "Croatia Airlines",
+    "aircraft": "BCS3",
+    "date": "2027-01-16",
+    "from": {
+      "iata": "ZAG",
+      "name": "Zagreb",
+      "city": "Zagreb",
+      "country": "Croatia",
+      "countryCode": "HR",
+      "coordinates": [
+        45.72999954223633,
+        16.059999465942383
+      ]
+    },
+    "to": {
+      "iata": "AMS",
+      "name": "Amsterdam Schiphol",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "coordinates": [
+        52.310001373291016,
+        4.760000228881836
+      ]
+    },
+    "distanceKm": 1100
+  },
+  {
+    "id": "400b3662-6ab3-409a-90fa-1b2306a87ecc",
+    "code": "OS514",
+    "airline": "Austrian",
+    "aircraft": "E195",
+    "date": "2027-01-11",
+    "from": {
+      "iata": "BLQ",
+      "name": "Bologna Guglielmo Marconi",
+      "city": "Bologna",
+      "country": "Italy",
+      "countryCode": "IT",
+      "coordinates": [
+        44.529998779296875,
+        11.289999961853027
+      ]
+    },
+    "to": {
+      "iata": "VIE",
+      "name": "Vienna Intl.",
+      "city": "Vienna",
+      "country": "Austria",
+      "countryCode": "AT",
+      "coordinates": [
+        48.119998931884766,
+        16.559999465942383
+      ]
+    },
+    "distanceKm": 568
+  },
+  {
+    "id": "112e3d81-aa26-4fa9-beb7-496001c903b4",
+    "code": "AF1726",
+    "airline": "Air France",
+    "aircraft": "A320",
+    "date": "2027-01-07",
+    "from": {
+      "iata": "CDG",
+      "name": "Paris Charles de Gaulle",
+      "city": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "coordinates": [
+        49,
+        2.569999933242798
+      ]
+    },
+    "to": {
+      "iata": "VCE",
+      "name": "Venice Marco Polo",
+      "city": "Venice",
+      "country": "Italy",
+      "countryCode": "IT",
+      "coordinates": [
+        45.5,
+        12.34000015258789
+      ]
+    },
+    "distanceKm": 833
+  },
+  {
+    "id": "c8fa936d-c9fb-483e-a48d-ccc7d45b52e1",
+    "code": "AF23",
+    "airline": "Air France",
+    "aircraft": "B77W",
+    "date": "2027-01-06",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "CDG",
+      "name": "Paris Charles de Gaulle",
+      "city": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "coordinates": [
+        49,
+        2.569999933242798
+      ]
+    },
+    "distanceKm": 9105
+  },
+  {
+    "id": "d230a66d-7474-47b4-b26b-4860a957f482",
+    "code": "AS729",
+    "airline": "Alaska",
+    "aircraft": "B738",
+    "date": "2026-12-18",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "444c1ae9-04bf-45f3-bec5-16fdbf17bb40",
+    "code": "AS1443",
+    "airline": "Alaska",
+    "aircraft": "B738",
+    "date": "2026-11-30",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "000d31ef-7b27-4dcb-aa54-b8d8043074d8",
+    "code": "WN3248",
+    "airline": "Southwest",
+    "aircraft": null,
+    "date": "2026-11-24",
+    "from": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 596
+  },
+  {
+    "id": "2c5a4769-c93e-43e7-a4ca-f752c602c660",
+    "code": "UA1387",
+    "airline": "United",
+    "aircraft": "A319",
+    "date": "2026-10-05",
+    "from": {
+      "iata": "ONT",
+      "name": "Ontario Intl.",
+      "city": "Ontario",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        34.060001373291016,
+        -117.5999984741211
+      ]
+    },
+    "to": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "distanceKm": 586
+  },
+  {
+    "id": "23e95c3f-58a5-4a49-b1c2-2cfe6bb32e6b",
+    "code": "WN853",
+    "airline": "Southwest",
+    "aircraft": "B38M",
+    "date": "2026-10-02",
+    "from": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "to": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "distanceKm": 567
+  },
+  {
+    "id": "67b02c5b-6a67-459f-97cb-fa6909b2fea7",
+    "code": "UA2304",
+    "airline": "United",
+    "aircraft": "B738",
+    "date": "2026-08-20",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "9a79dfaf-43bb-43c4-b3fb-a54a01c3e6f7",
+    "code": "BR16",
+    "airline": "EVA Air",
+    "aircraft": "B77W",
+    "date": "2026-07-29",
+    "from": {
+      "iata": "TPE",
+      "name": "Taipei-Taiwan Taoyuan Intl.",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "coordinates": [
+        25.079999923706055,
+        121.2300033569336
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 10922
+  },
+  {
+    "id": "abd7f3e8-7212-4f70-82b2-19278587a1bd",
+    "code": "BR216",
+    "airline": "EVA Air",
+    "aircraft": "B77W",
+    "date": "2026-07-29",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "TPE",
+      "name": "Taipei-Taiwan Taoyuan Intl.",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "coordinates": [
+        25.079999923706055,
+        121.2300033569336
+      ]
+    },
+    "distanceKm": 3222
+  },
+  {
+    "id": "cea94806-64ff-4d56-a4d2-e1eef35c1eb2",
+    "code": "SQ893",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2026-07-23",
+    "from": {
+      "iata": "HKG",
+      "name": "Hong Kong Intl.",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "countryCode": "HK",
+      "coordinates": [
+        22.31999969482422,
+        113.94000244140625
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 2567
+  },
+  {
+    "id": "4b1a6a72-ca6d-424a-a648-ee3d543171cb",
+    "code": "DL89",
+    "airline": "Delta",
+    "aircraft": "A359",
+    "date": "2026-07-20",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "HKG",
+      "name": "Hong Kong Intl.",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "countryCode": "HK",
+      "coordinates": [
+        22.31999969482422,
+        113.94000244140625
+      ]
+    },
+    "distanceKm": 11662
+  },
+  {
+    "id": "3efab5dc-bd12-4a0f-be0d-f9bedef5104f",
+    "code": "UA2850",
+    "airline": "United",
+    "aircraft": "B739",
+    "date": "2026-06-03",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 544
+  },
+  {
+    "id": "79fa750e-a202-46a9-b9df-144785954a12",
+    "code": "UA1604",
+    "airline": "United",
+    "aircraft": "B738",
+    "date": "2026-05-30",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "df72b345-ae8a-437c-9242-1d0f7da822d2",
+    "code": "AS3326",
+    "airline": "Alaska",
+    "aircraft": "E75W",
+    "date": "2026-05-16",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "225672c4-4c22-4f54-b20f-9b05302e8a5d",
+    "code": "LH454",
+    "airline": "Lufthansa",
+    "aircraft": "B744",
+    "date": "2026-03-29",
+    "from": {
+      "iata": "KEF",
+      "name": "Keflavík Airport",
+      "city": "Reykjavík",
+      "country": "Iceland",
+      "countryCode": "IS",
+      "coordinates": [
+        64,
+        -22.6200008392334
+      ]
+    },
+    "to": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "distanceKm": 6747
+  },
+  {
+    "id": "453118f8-f9bf-4e90-aafe-37139984a028",
+    "code": "LX1072",
+    "airline": "SWISS",
+    "aircraft": "E295",
+    "date": "2026-03-28",
+    "from": {
+      "iata": "ZRH",
+      "name": "Zürich",
+      "city": "Zürich",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "coordinates": [
+        47.45150375366211,
+        8.562299728393555
+      ]
+    },
+    "to": {
+      "iata": "FRA",
+      "name": "Frankfurt am Main",
+      "city": "Frankfurt",
+      "country": "Germany",
+      "countryCode": "DE",
+      "coordinates": [
+        50.04999923706055,
+        8.569999694824219
+      ]
+    },
+    "distanceKm": 289
+  },
+  {
+    "id": "1b141757-9d5a-431a-a937-5f3cd1eeb8f1",
+    "code": "LH459",
+    "airline": "Lufthansa",
+    "aircraft": "A388",
+    "date": "2026-03-19",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "MUC",
+      "name": "Munich Airport Franz Josef Strauss",
+      "city": "Munich",
+      "country": "Germany",
+      "countryCode": "DE",
+      "coordinates": [
+        48.349998474121094,
+        11.789999961853027
+      ]
+    },
+    "distanceKm": 9438
+  },
+  {
+    "id": "7bbdd81e-8248-4f34-9eca-df0343606bd8",
+    "code": "WN404",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2026-03-09",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "distanceKm": 596
+  },
+  {
+    "id": "0aa18034-8a18-4e5b-94f4-38f24c9e0e5a",
+    "code": "WN1678",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2026-03-04",
+    "from": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 596
+  },
+  {
+    "id": "d6483b79-bb4c-494c-a13a-5717e7f1c601",
+    "code": "WN1233",
+    "airline": "Southwest",
+    "aircraft": "B738",
+    "date": "2026-01-19",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "distanceKm": 567
+  },
+  {
+    "id": "3bd39fff-0c02-48b8-8170-e726f1d4af8c",
+    "code": "VS7",
+    "airline": "Virgin Atlantic",
+    "aircraft": "A35K",
+    "date": "2026-01-18",
+    "from": {
+      "iata": "LHR",
+      "name": "London Heathrow",
+      "city": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "coordinates": [
+        51.470001220703125,
+        -0.44999998807907104
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8761
+  },
+  {
+    "id": "7f0cb86b-0925-4b82-8307-49f0ab6fc790",
+    "code": "BA867",
+    "airline": "British Airways",
+    "aircraft": "A319",
+    "date": "2026-01-17",
+    "from": {
+      "iata": "BUD",
+      "name": "Budapest Ferenc Liszt Intl.",
+      "city": "Budapest",
+      "country": "Hungary",
+      "countryCode": "HU",
+      "coordinates": [
+        47.43000030517578,
+        19.260000228881836
+      ]
+    },
+    "to": {
+      "iata": "LHR",
+      "name": "London Heathrow",
+      "city": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "coordinates": [
+        51.470001220703125,
+        -0.44999998807907104
+      ]
+    },
+    "distanceKm": 1489
+  },
+  {
+    "id": "2589e8e7-2bf2-4750-9742-ddb5add35f4a",
+    "code": "AF1834",
+    "airline": "Air France",
+    "aircraft": "BCS3",
+    "date": "2026-01-08",
+    "from": {
+      "iata": "CDG",
+      "name": "Paris Charles de Gaulle",
+      "city": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "coordinates": [
+        49,
+        2.569999933242798
+      ]
+    },
+    "to": {
+      "iata": "BER",
+      "name": "Berlin Brandenburg",
+      "city": "Berlin",
+      "country": "Germany",
+      "countryCode": "DE",
+      "coordinates": [
+        52.363765716552734,
+        13.50760269165039
+      ]
+    },
+    "distanceKm": 855
+  },
+  {
+    "id": "d28113c2-da47-4add-8e9a-d46aae660ad8",
+    "code": "AF23",
+    "airline": "Air France",
+    "aircraft": "B77W",
+    "date": "2026-01-07",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "CDG",
+      "name": "Paris Charles de Gaulle",
+      "city": "Paris",
+      "country": "France",
+      "countryCode": "FR",
+      "coordinates": [
+        49,
+        2.569999933242798
+      ]
+    },
+    "distanceKm": 9105
+  },
+  {
+    "id": "ec4ac7bf-b220-49ee-9d13-655d7da27d8c",
+    "code": "WN1451",
+    "airline": "Southwest",
+    "aircraft": "B38M",
+    "date": "2025-12-18",
+    "from": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "to": {
+      "iata": "ONT",
+      "name": "Ontario Intl.",
+      "city": "Ontario",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        34.060001373291016,
+        -117.5999984741211
+      ]
+    },
+    "distanceKm": 581
+  },
+  {
+    "id": "89161d7e-9ade-406b-9bea-172a866bad15",
+    "code": "WN244",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2025-11-30",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "distanceKm": 567
+  },
+  {
+    "id": "b35dc30c-d8ec-44ba-8b13-ebf74a9c9dfb",
+    "code": "WN3914",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2025-11-23",
+    "from": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 596
+  },
+  {
+    "id": "fcf6b799-3d13-41f8-9af2-eeacc25fbc48",
+    "code": "WN3481",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2025-11-03",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "distanceKm": 567
+  },
+  {
+    "id": "e39c5942-6c70-43ef-986a-6cfef3f22932",
+    "code": "UA366",
+    "airline": "United",
+    "aircraft": "B738",
+    "date": "2025-10-31",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "95f82dda-8357-4f87-9d66-0b05435f58fb",
+    "code": "WN184",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2025-08-18",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "distanceKm": 567
+  },
+  {
+    "id": "acfa1cb0-bc1e-44d4-b8d2-c91e68cd4670",
+    "code": "DL1304",
+    "airline": "Delta",
+    "aircraft": "BCS1",
+    "date": "2025-07-08",
+    "from": {
+      "iata": "SLC",
+      "name": "Salt Lake City Intl.",
+      "city": "Salt Lake City",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.790000915527344,
+        -111.9800033569336
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 946
+  },
+  {
+    "id": "41eafe5a-e984-4468-a87b-9d3d16fda3c5",
+    "code": "DL2468",
+    "airline": "Delta",
+    "aircraft": "BCS3",
+    "date": "2025-07-08",
+    "from": {
+      "iata": "YYZ",
+      "name": "Lester B. Pearson Intl.",
+      "city": "Toronto",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        43.68000030517578,
+        -79.61000061035156
+      ]
+    },
+    "to": {
+      "iata": "SLC",
+      "name": "Salt Lake City Intl.",
+      "city": "Salt Lake City",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.790000915527344,
+        -111.9800033569336
+      ]
+    },
+    "distanceKm": 2667
+  },
+  {
+    "id": "279479e5-d244-4a23-b95d-c418991524fc",
+    "code": "AC788",
+    "airline": "Air Canada",
+    "aircraft": "B788",
+    "date": "2025-07-05",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "YYZ",
+      "name": "Lester B. Pearson Intl.",
+      "city": "Toronto",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        43.68000030517578,
+        -79.61000061035156
+      ]
+    },
+    "distanceKm": 3496
+  },
+  {
+    "id": "3acb0aaf-2f07-4326-a0c6-6d0a8b86d9b5",
+    "code": "SQ36",
+    "airline": "Singapore Airlines",
+    "aircraft": "A359",
+    "date": "2025-06-27",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 14101
+  },
+  {
+    "id": "2b77a777-3475-431c-bbc4-b6ab833df945",
+    "code": "SQ883",
+    "airline": "Singapore Airlines",
+    "aircraft": "A359",
+    "date": "2025-06-25",
+    "from": {
+      "iata": "HKG",
+      "name": "Hong Kong Intl.",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "countryCode": "HK",
+      "coordinates": [
+        22.31999969482422,
+        113.94000244140625
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 2567
+  },
+  {
+    "id": "42112084-4cd8-4554-8a6d-8e643a01c4ee",
+    "code": "CX489",
+    "airline": "Cathay Pacific",
+    "aircraft": "A333",
+    "date": "2025-06-23",
+    "from": {
+      "iata": "TPE",
+      "name": "Taipei-Taiwan Taoyuan Intl.",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "coordinates": [
+        25.079999923706055,
+        121.2300033569336
+      ]
+    },
+    "to": {
+      "iata": "HKG",
+      "name": "Hong Kong Intl.",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "countryCode": "HK",
+      "coordinates": [
+        22.31999969482422,
+        113.94000244140625
+      ]
+    },
+    "distanceKm": 803
+  },
+  {
+    "id": "9c0ea7a2-4417-440e-aaa3-9a92eb8f3a82",
+    "code": "SQ878",
+    "airline": "Singapore Airlines",
+    "aircraft": "B78X",
+    "date": "2025-06-20",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "TPE",
+      "name": "Taipei-Taiwan Taoyuan Intl.",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "countryCode": "TW",
+      "coordinates": [
+        25.079999923706055,
+        121.2300033569336
+      ]
+    },
+    "distanceKm": 3222
+  },
+  {
+    "id": "3f15f39f-6cac-4cfc-a5a3-84d56f357764",
+    "code": "SQ37",
+    "airline": "Singapore Airlines",
+    "aircraft": "A359",
+    "date": "2025-06-11",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 14101
+  },
+  {
+    "id": "567828ad-64e2-4222-931d-d0ff349bfd27",
+    "code": "UA313",
+    "airline": "United",
+    "aircraft": "A320",
+    "date": "2025-04-19",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "7301d37b-fde9-4d31-8fd6-603a17de30ff",
+    "code": "UA589",
+    "airline": "United",
+    "aircraft": "A320",
+    "date": "2025-04-19",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 599
+  },
+  {
+    "id": "77706935-70c3-4a8a-876f-08477a721e05",
+    "code": "WN3495",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2025-03-30",
+    "from": {
+      "iata": "SJC",
+      "name": "San Jose Mineta Intl.",
+      "city": "San Jose",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.36418151855469,
+        -121.92350006103516
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 550
+  },
+  {
+    "id": "14d91761-fe6e-486f-a3f0-7fd74be65db5",
+    "code": "WN3918",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2025-03-27",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "SJC",
+      "name": "San Jose Mineta Intl.",
+      "city": "San Jose",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.36418151855469,
+        -121.92350006103516
+      ]
+    },
+    "distanceKm": 550
+  },
+  {
+    "id": "b977fcda-16e0-4fc6-aac6-c9670b174179",
+    "code": "JL62",
+    "airline": "Japan Airlines",
+    "aircraft": "B789",
+    "date": "2025-03-22",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "8610830d-6fe6-4df8-813e-e2b01a30c1e7",
+    "code": "7G44",
+    "airline": "StarFlyer",
+    "aircraft": "A20N",
+    "date": "2025-03-21",
+    "from": {
+      "iata": "FUK",
+      "name": "Fukuoka",
+      "city": "Fukuoka",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        33.58000183105469,
+        130.44000244140625
+      ]
+    },
+    "to": {
+      "iata": "HND",
+      "name": "Tokyo Haneda Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.54999923706055,
+        139.77999877929688
+      ]
+    },
+    "distanceKm": 882
+  },
+  {
+    "id": "ed07177b-f6a4-4445-86fb-a16aae21c8e6",
+    "code": "JL69",
+    "airline": "Japan Airlines",
+    "aircraft": "B789",
+    "date": "2025-03-15",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "KIX",
+      "name": "Kansai Intl.",
+      "city": "Osaka",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        34.439998626708984,
+        135.24000549316406
+      ]
+    },
+    "distanceKm": 9221
+  },
+  {
+    "id": "95d33b44-92e7-4255-9e5c-c7e363b8361f",
+    "code": "VS7",
+    "airline": "Virgin Atlantic",
+    "aircraft": "A35K",
+    "date": "2025-01-05",
+    "from": {
+      "iata": "LHR",
+      "name": "London Heathrow",
+      "city": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "coordinates": [
+        51.470001220703125,
+        -0.44999998807907104
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8761
+  },
+  {
+    "id": "53fd0958-0d64-47df-a6b3-4ea1fb465dac",
+    "code": "BA753",
+    "airline": "British Airways",
+    "aircraft": "A20N",
+    "date": "2025-01-04",
+    "from": {
+      "iata": "BSL",
+      "name": "EuroAirport Swiss",
+      "city": "Basel, Switzerland/Mulhouse",
+      "country": "France",
+      "countryCode": "FR",
+      "coordinates": [
+        47.599608,
+        7.532604
+      ]
+    },
+    "to": {
+      "iata": "LHR",
+      "name": "London Heathrow",
+      "city": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "coordinates": [
+        51.470001220703125,
+        -0.44999998807907104
+      ]
+    },
+    "distanceKm": 718
+  },
+  {
+    "id": "9368a6df-147c-481c-b6f5-3b508e9ff07c",
+    "code": "KL1645",
+    "airline": "KLM",
+    "aircraft": "E190",
+    "date": "2024-12-27",
+    "from": {
+      "iata": "AMS",
+      "name": "Amsterdam Schiphol",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "coordinates": [
+        52.310001373291016,
+        4.760000228881836
+      ]
+    },
+    "to": {
+      "iata": "GOA",
+      "name": "Genoa Cristoforo Colombo",
+      "city": "Genoa",
+      "country": "Italy",
+      "countryCode": "IT",
+      "coordinates": [
+        44.41999816894531,
+        8.850000381469727
+      ]
+    },
+    "distanceKm": 928
+  },
+  {
+    "id": "b89a20f5-41b5-4cb0-9836-5e35e7868a3e",
+    "code": "KL602",
+    "airline": "KLM",
+    "aircraft": "B78X",
+    "date": "2024-12-26",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "AMS",
+      "name": "Amsterdam Schiphol",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "coordinates": [
+        52.310001373291016,
+        4.760000228881836
+      ]
+    },
+    "distanceKm": 8956
+  },
+  {
+    "id": "cc13ff46-2f82-41af-b366-823e3a837f9e",
+    "code": "F92678",
+    "airline": "Frontier Airlines",
+    "aircraft": "A320",
+    "date": "2024-11-03",
+    "from": {
+      "iata": "SFO",
+      "name": "San Francisco Intl.",
+      "city": "San Francisco",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.619998931884766,
+        -122.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "ONT",
+      "name": "Ontario Intl.",
+      "city": "Ontario",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        34.060001373291016,
+        -117.5999984741211
+      ]
+    },
+    "distanceKm": 586
+  },
+  {
+    "id": "00e46b93-ac1f-4268-b154-d6aabccc88c6",
+    "code": "NK872",
+    "airline": "Spirit",
+    "aircraft": "A320",
+    "date": "2024-11-01",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "OAK",
+      "name": "Metropolitan Oakland Intl.",
+      "city": "Oakland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        37.709999084472656,
+        -122.20999908447266
+      ]
+    },
+    "distanceKm": 596
+  },
+  {
+    "id": "ec97c9e6-0e69-4b83-9d20-c638b24260ed",
+    "code": "SK931",
+    "airline": "SAS",
+    "aircraft": "A359",
+    "date": "2024-07-29",
+    "from": {
+      "iata": "CPH",
+      "name": "Copenhagen Kastrup",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "countryCode": "DK",
+      "coordinates": [
+        55.630001068115234,
+        12.649999618530273
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 9028
+  },
+  {
+    "id": "87e0b69e-87b4-4f0f-8e0a-817cc1f4a3de",
+    "code": "BT511",
+    "airline": "airBaltic",
+    "aircraft": "BCS3",
+    "date": "2024-07-28",
+    "from": {
+      "iata": "TMP",
+      "name": "Tampere-Pirkkala",
+      "city": "Tampere",
+      "country": "Finland",
+      "countryCode": "FI",
+      "coordinates": [
+        61.41999816894531,
+        23.6200008392334
+      ]
+    },
+    "to": {
+      "iata": "CPH",
+      "name": "Copenhagen Kastrup",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "countryCode": "DK",
+      "coordinates": [
+        55.630001068115234,
+        12.649999618530273
+      ]
+    },
+    "distanceKm": 903
+  },
+  {
+    "id": "f5222067-b1d9-4c6a-b568-d825ef75ff0b",
+    "code": "DY1190",
+    "airline": "Norwegian",
+    "aircraft": "B738",
+    "date": "2024-07-25",
+    "from": {
+      "iata": "OSL",
+      "name": "Oslo Gardermoen",
+      "city": "Oslo",
+      "country": "Norway",
+      "countryCode": "NO",
+      "coordinates": [
+        60.189998626708984,
+        11.100000381469727
+      ]
+    },
+    "to": {
+      "iata": "HEL",
+      "name": "Helsinki Vantaa",
+      "city": "Helsinki",
+      "country": "Finland",
+      "countryCode": "FI",
+      "coordinates": [
+        60.31999969482422,
+        24.969999313354492
+      ]
+    },
+    "distanceKm": 764
+  },
+  {
+    "id": "99299bca-b339-4801-aa4b-2e2401efcb43",
+    "code": "SK932",
+    "airline": "SAS",
+    "aircraft": "A359",
+    "date": "2024-07-19",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "CPH",
+      "name": "Copenhagen Kastrup",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "countryCode": "DK",
+      "coordinates": [
+        55.630001068115234,
+        12.649999618530273
+      ]
+    },
+    "distanceKm": 9028
+  },
+  {
+    "id": "5203d2fd-ac61-4215-9f78-5791873df905",
+    "code": "NH6",
+    "airline": "All Nippon Airways",
+    "aircraft": "B789",
+    "date": "2024-03-23",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "48a0329b-85e5-4d58-a1e7-9c5aafa694e4",
+    "code": "NH125",
+    "airline": "All Nippon Airways",
+    "aircraft": "B788",
+    "date": "2024-03-16",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "HND",
+      "name": "Tokyo Haneda Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.54999923706055,
+        139.77999877929688
+      ]
+    },
+    "distanceKm": 8813
+  },
+  {
+    "id": "16ebedd0-2e86-475b-860e-035e30412676",
+    "code": "UA2679",
+    "airline": "United",
+    "aircraft": "B752",
+    "date": "2024-01-07",
+    "from": {
+      "iata": "EWR",
+      "name": "Newark",
+      "city": "Newark",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.689998626708984,
+        -74.18000030517578
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 3940
+  },
+  {
+    "id": "59bd724b-9240-4791-8096-bae5a3794bdc",
+    "code": "SQ26",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2024-01-06",
+    "from": {
+      "iata": "FRA",
+      "name": "Frankfurt am Main",
+      "city": "Frankfurt",
+      "country": "Germany",
+      "countryCode": "DE",
+      "coordinates": [
+        50.04999923706055,
+        8.569999694824219
+      ]
+    },
+    "to": {
+      "iata": "JFK",
+      "name": "John F Kennedy",
+      "city": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.63999938964844,
+        -73.79000091552734
+      ]
+    },
+    "distanceKm": 6189
+  },
+  {
+    "id": "8f5e7223-21da-4ff1-b714-a7ab4f3f3214",
+    "code": "KL602",
+    "airline": "KLM",
+    "aircraft": "B78X",
+    "date": "2023-12-26",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "AMS",
+      "name": "Amsterdam Schiphol",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "coordinates": [
+        52.310001373291016,
+        4.760000228881836
+      ]
+    },
+    "distanceKm": 8956
+  },
+  {
+    "id": "ee4888c7-b460-4f41-8aa2-c3afa6331a4e",
+    "code": "AA1717",
+    "airline": "American Airlines",
+    "aircraft": "A319",
+    "date": "2023-11-21",
+    "from": {
+      "iata": "YVR",
+      "name": "Vancouver Intl.",
+      "city": "Vancouver",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        49.189998626708984,
+        -123.18000030517578
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 1741
+  },
+  {
+    "id": "98d72ada-ba06-4e62-aaf4-a1de9fea33b1",
+    "code": "AA1717",
+    "airline": "American Airlines",
+    "aircraft": "A319",
+    "date": "2023-11-18",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "YVR",
+      "name": "Vancouver Intl.",
+      "city": "Vancouver",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        49.189998626708984,
+        -123.18000030517578
+      ]
+    },
+    "distanceKm": 1741
+  },
+  {
+    "id": "02fe30e3-d6d2-41eb-a224-8ed1c412cc21",
+    "code": "DL187",
+    "airline": "Delta",
+    "aircraft": "A339",
+    "date": "2023-08-01",
+    "from": {
+      "iata": "LHR",
+      "name": "London Heathrow",
+      "city": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "coordinates": [
+        51.470001220703125,
+        -0.44999998807907104
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8761
+  },
+  {
+    "id": "b73e510a-523c-40cd-bc73-efc4f86a36dc",
+    "code": "DL186",
+    "airline": "Delta",
+    "aircraft": "A339",
+    "date": "2023-07-26",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "LHR",
+      "name": "London Heathrow",
+      "city": "London",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "coordinates": [
+        51.470001220703125,
+        -0.44999998807907104
+      ]
+    },
+    "distanceKm": 8761
+  },
+  {
+    "id": "a1e6c98a-c1b9-4ead-a16a-921f3afbe38d",
+    "code": "DL1880",
+    "airline": "Delta",
+    "aircraft": "B739",
+    "date": "2023-06-24",
+    "from": {
+      "iata": "PDX",
+      "name": "Portland Intl.",
+      "city": "Portland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        45.59000015258789,
+        -122.58999633789062
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 1343
+  },
+  {
+    "id": "2c18cc3d-c520-4649-ac37-1bfd1882316a",
+    "code": "FI665",
+    "airline": "Icelandair",
+    "aircraft": "B752",
+    "date": "2023-06-23",
+    "from": {
+      "iata": "KEF",
+      "name": "Keflavík Airport",
+      "city": "Reykjavík",
+      "country": "Iceland",
+      "countryCode": "IS",
+      "coordinates": [
+        64,
+        -22.6200008392334
+      ]
+    },
+    "to": {
+      "iata": "PDX",
+      "name": "Portland Intl.",
+      "city": "Portland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        45.59000015258789,
+        -122.58999633789062
+      ]
+    },
+    "distanceKm": 5995
+  },
+  {
+    "id": "6ee1d83f-25b3-4bc4-9108-53f0bfa87b82",
+    "code": "FI682",
+    "airline": "Icelandair",
+    "aircraft": "B763",
+    "date": "2023-06-18",
+    "from": {
+      "iata": "SEA",
+      "name": "Seattle Tacoma Intl.",
+      "city": "Seattle",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        47.439998626708984,
+        -122.30000305175781
+      ]
+    },
+    "to": {
+      "iata": "KEF",
+      "name": "Keflavík Airport",
+      "city": "Reykjavík",
+      "country": "Iceland",
+      "countryCode": "IS",
+      "coordinates": [
+        64,
+        -22.6200008392334
+      ]
+    },
+    "distanceKm": 5810
+  },
+  {
+    "id": "b426a640-92c2-4bf8-8de9-a2db6ae4a9eb",
+    "code": "B6706",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2023-06-17",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "SEA",
+      "name": "Seattle Tacoma Intl.",
+      "city": "Seattle",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        47.439998626708984,
+        -122.30000305175781
+      ]
+    },
+    "distanceKm": 1536
+  },
+  {
+    "id": "3493eb8b-6258-4a26-898f-9c805a18ed83",
+    "code": "UA387",
+    "airline": "United",
+    "aircraft": "A319",
+    "date": "2023-06-05",
+    "from": {
+      "iata": "YVR",
+      "name": "Vancouver Intl.",
+      "city": "Vancouver",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        49.189998626708984,
+        -123.18000030517578
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 1741
+  },
+  {
+    "id": "dc05082b-2bae-43e6-8c41-6d08d936d683",
+    "code": "AC599",
+    "airline": "Air Canada",
+    "aircraft": "B38M",
+    "date": "2023-06-02",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "YVR",
+      "name": "Vancouver Intl.",
+      "city": "Vancouver",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        49.189998626708984,
+        -123.18000030517578
+      ]
+    },
+    "distanceKm": 1780
+  },
+  {
+    "id": "b001994b-f407-4968-abb1-61442d655804",
+    "code": "AC793",
+    "airline": "Air Canada",
+    "aircraft": "A321",
+    "date": "2023-03-25",
+    "from": {
+      "iata": "YYZ",
+      "name": "Lester B. Pearson Intl.",
+      "city": "Toronto",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        43.68000030517578,
+        -79.61000061035156
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 3496
+  },
+  {
+    "id": "73930d00-ddaa-4301-b9ea-1473c5e6d8d3",
+    "code": "AC774",
+    "airline": "Air Canada",
+    "aircraft": "BCS3",
+    "date": "2023-03-18",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "YUL",
+      "name": "Montreal-Pierre Elliott Trudeau Intl.",
+      "city": "Montreal",
+      "country": "Canada",
+      "countryCode": "CA",
+      "coordinates": [
+        45.459999084472656,
+        -73.75
+      ]
+    },
+    "distanceKm": 3972
+  },
+  {
+    "id": "7504545b-5fd8-46c3-939e-3bc26519be6f",
+    "code": "LX40",
+    "airline": "SWISS",
+    "aircraft": "B77W",
+    "date": "2023-01-07",
+    "from": {
+      "iata": "ZRH",
+      "name": "Zürich",
+      "city": "Zürich",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "coordinates": [
+        47.45150375366211,
+        8.562299728393555
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 9536
+  },
+  {
+    "id": "07e3b982-c8f5-4d49-a02d-34123197eeab",
+    "code": "LX41",
+    "airline": "SWISS",
+    "aircraft": "B77W",
+    "date": "2022-12-26",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "ZRH",
+      "name": "Zürich",
+      "city": "Zürich",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "coordinates": [
+        47.45150375366211,
+        8.562299728393555
+      ]
+    },
+    "distanceKm": 9536
+  },
+  {
+    "id": "3ca7ff41-8879-4755-9d8b-eb326f6b4349",
+    "code": "DL3680",
+    "airline": "Delta",
+    "aircraft": "E75W",
+    "date": "2022-08-11",
+    "from": {
+      "iata": "SEA",
+      "name": "Seattle Tacoma Intl.",
+      "city": "Seattle",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        47.439998626708984,
+        -122.30000305175781
+      ]
+    },
+    "to": {
+      "iata": "ONT",
+      "name": "Ontario Intl.",
+      "city": "Ontario",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        34.060001373291016,
+        -117.5999984741211
+      ]
+    },
+    "distanceKm": 1539
+  },
+  {
+    "id": "473076b1-df4e-47be-961a-4c358c654b23",
+    "code": "DL2557",
+    "airline": "Delta",
+    "aircraft": "BCS1",
+    "date": "2022-08-09",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "SEA",
+      "name": "Seattle Tacoma Intl.",
+      "city": "Seattle",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        47.439998626708984,
+        -122.30000305175781
+      ]
+    },
+    "distanceKm": 1575
+  },
+  {
+    "id": "683f01b0-7683-4031-a1cd-9f35ace7b7ac",
+    "code": "DL1705",
+    "airline": "Delta",
+    "aircraft": "BCS3",
+    "date": "2022-07-16",
+    "from": {
+      "iata": "SLC",
+      "name": "Salt Lake City Intl.",
+      "city": "Salt Lake City",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.790000915527344,
+        -111.9800033569336
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 946
+  },
+  {
+    "id": "f84dd968-1b88-46a1-b7f6-338b2b387266",
+    "code": "DL510",
+    "airline": "Delta",
+    "aircraft": "A320",
+    "date": "2022-07-16",
+    "from": {
+      "iata": "ORD",
+      "name": "Chicago O'Hare",
+      "city": "Chicago",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        41.97999954223633,
+        -87.9000015258789
+      ]
+    },
+    "to": {
+      "iata": "SLC",
+      "name": "Salt Lake City Intl.",
+      "city": "Salt Lake City",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.790000915527344,
+        -111.9800033569336
+      ]
+    },
+    "distanceKm": 2007
+  },
+  {
+    "id": "0e28ca3b-8115-44cc-8c71-01589f73b7d0",
+    "code": "AA383",
+    "airline": "American Airlines",
+    "aircraft": "B738",
+    "date": "2022-07-12",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "ORD",
+      "name": "Chicago O'Hare",
+      "city": "Chicago",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        41.97999954223633,
+        -87.9000015258789
+      ]
+    },
+    "distanceKm": 2803
+  },
+  {
+    "id": "60ed2643-6da3-4e52-8c9b-d52c82ef0ae4",
+    "code": "WN2812",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2022-06-28",
+    "from": {
+      "iata": "DEN",
+      "name": "Denver Intl.",
+      "city": "Denver",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        39.849998474121094,
+        -104.66999816894531
+      ]
+    },
+    "to": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "distanceKm": 1371
+  },
+  {
+    "id": "a2a9aefe-aa55-4560-a551-09fb17447971",
+    "code": "WN4821",
+    "airline": "Southwest",
+    "aircraft": "B737",
+    "date": "2022-06-25",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "DEN",
+      "name": "Denver Intl.",
+      "city": "Denver",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        39.849998474121094,
+        -104.66999816894531
+      ]
+    },
+    "distanceKm": 1371
+  },
+  {
+    "id": "d416154e-99a6-40b5-92ac-780c01acbc4d",
+    "code": "B6823",
+    "airline": "JetBlue",
+    "aircraft": "A321",
+    "date": "2022-03-26",
+    "from": {
+      "iata": "JFK",
+      "name": "John F Kennedy",
+      "city": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.63999938964844,
+        -73.79000091552734
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 3974
+  },
+  {
+    "id": "b9464dbc-54d5-40db-8770-f3b2cc95b0e0",
+    "code": "B61111",
+    "airline": "JetBlue",
+    "aircraft": "BCS3",
+    "date": "2022-03-23",
+    "from": {
+      "iata": "BOS",
+      "name": "Boston Logan Intl.",
+      "city": "Boston",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        42.369998931884766,
+        -71.0199966430664
+      ]
+    },
+    "to": {
+      "iata": "JFK",
+      "name": "John F Kennedy",
+      "city": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.63999938964844,
+        -73.79000091552734
+      ]
+    },
+    "distanceKm": 300
+  },
+  {
+    "id": "5d141189-1b82-44d9-ba2e-7f462a14280b",
+    "code": "B6288",
+    "airline": "JetBlue",
+    "aircraft": "A321",
+    "date": "2022-03-19",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "BOS",
+      "name": "Boston Logan Intl.",
+      "city": "Boston",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        42.369998931884766,
+        -71.0199966430664
+      ]
+    },
+    "distanceKm": 4192
+  },
+  {
+    "id": "c3b5ef74-7051-47fe-becd-9a3d1a1a3a14",
+    "code": "F9269",
+    "airline": "Frontier Airlines",
+    "aircraft": "A320",
+    "date": "2021-07-17",
+    "from": {
+      "iata": "DEN",
+      "name": "Denver Intl.",
+      "city": "Denver",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        39.849998474121094,
+        -104.66999816894531
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 1358
+  },
+  {
+    "id": "f8555544-89f8-4a5e-a895-c95a6196b684",
+    "code": "F9324",
+    "airline": "Frontier Airlines",
+    "aircraft": "A20N",
+    "date": "2021-07-15",
+    "from": {
+      "iata": "BUR",
+      "name": "Hollywood Burbank Airport",
+      "city": "Burbank",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        34.20000076293945,
+        -118.3499984741211
+      ]
+    },
+    "to": {
+      "iata": "DEN",
+      "name": "Denver Intl.",
+      "city": "Denver",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        39.849998474121094,
+        -104.66999816894531
+      ]
+    },
+    "distanceKm": 1365
+  },
+  {
+    "id": "e81f5a6b-79a9-44b2-a78a-6402b044e0c4",
+    "code": "B61121",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2020-01-20",
+    "from": {
+      "iata": "PDX",
+      "name": "Portland Intl.",
+      "city": "Portland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        45.59000015258789,
+        -122.58999633789062
+      ]
+    },
+    "to": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "distanceKm": 1362
+  },
+  {
+    "id": "86b91848-38bf-4801-ab01-10d26d17e296",
+    "code": "B61822",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2020-01-17",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "PDX",
+      "name": "Portland Intl.",
+      "city": "Portland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        45.59000015258789,
+        -122.58999633789062
+      ]
+    },
+    "distanceKm": 1362
+  },
+  {
+    "id": "633c860a-ac61-4778-9d49-3245a62d6e95",
+    "code": "SQ38",
+    "airline": "Singapore Airlines",
+    "aircraft": "A359",
+    "date": "2019-08-29",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 14101
+  },
+  {
+    "id": "848128f7-709f-4ac0-8da0-139f2f4ac2f5",
+    "code": "SQ37",
+    "airline": "Singapore Airlines",
+    "aircraft": "A359",
+    "date": "2019-08-12",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 14101
+  },
+  {
+    "id": "deb9ef1b-98d6-4706-a0af-c0206291d559",
+    "code": "SQ38",
+    "airline": "Singapore Airlines",
+    "aircraft": "A359",
+    "date": "2019-06-30",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 14101
+  },
+  {
+    "id": "6dc18f18-4a87-4315-a137-6f18b6918b3a",
+    "code": "SQ37",
+    "airline": "Singapore Airlines",
+    "aircraft": "A359",
+    "date": "2019-06-17",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 14101
+  },
+  {
+    "id": "9afa604d-7993-4ba2-9042-bda4cf6d9f6d",
+    "code": "VA23",
+    "airline": "Virgin Australia",
+    "aircraft": "B77W",
+    "date": "2019-04-28",
+    "from": {
+      "iata": "MEL",
+      "name": "Melbourne Intl.",
+      "city": "Melbourne",
+      "country": "Australia",
+      "countryCode": "AU",
+      "coordinates": [
+        -37.66999816894531,
+        144.83999633789062
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 12758
+  },
+  {
+    "id": "272bcd09-bd33-4f25-bf33-798da5e0b52f",
+    "code": "VA816",
+    "airline": "Virgin Australia",
+    "aircraft": "B738",
+    "date": "2019-04-25",
+    "from": {
+      "iata": "SYD",
+      "name": "Sydney Kingsford Smith Intl.",
+      "city": "Sydney",
+      "country": "Australia",
+      "countryCode": "AU",
+      "coordinates": [
+        -33.93000030517578,
+        151.17999267578125
+      ]
+    },
+    "to": {
+      "iata": "MEL",
+      "name": "Melbourne Intl.",
+      "city": "Melbourne",
+      "country": "Australia",
+      "countryCode": "AU",
+      "coordinates": [
+        -37.66999816894531,
+        144.83999633789062
+      ]
+    },
+    "distanceKm": 707
+  },
+  {
+    "id": "f9cc6b42-380d-4631-8acf-73be8d5c0d13",
+    "code": "VA2",
+    "airline": "Virgin Australia",
+    "aircraft": "B77W",
+    "date": "2019-04-18",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "SYD",
+      "name": "Sydney Kingsford Smith Intl.",
+      "city": "Sydney",
+      "country": "Australia",
+      "countryCode": "AU",
+      "coordinates": [
+        -33.93000030517578,
+        151.17999267578125
+      ]
+    },
+    "distanceKm": 12060
+  },
+  {
+    "id": "884ff7e8-8e44-4a24-8299-d28f3314ffd0",
+    "code": "OO5205",
+    "airline": "SkyWest",
+    "aircraft": "E75W",
+    "date": "2019-02-18",
+    "from": {
+      "iata": "DFW",
+      "name": "Dallas Fort Worth Intl.",
+      "city": "Dallas",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        32.900001525878906,
+        -97.04000091552734
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 1983
+  },
+  {
+    "id": "88e89cad-e674-4c2f-b93d-c1dbd314f7fb",
+    "code": "OO5609",
+    "airline": "SkyWest",
+    "aircraft": "E75W",
+    "date": "2019-02-14",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "DFW",
+      "name": "Dallas Fort Worth Intl.",
+      "city": "Dallas",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        32.900001525878906,
+        -97.04000091552734
+      ]
+    },
+    "distanceKm": 1983
+  },
+  {
+    "id": "3f6833db-3e52-4a24-ae45-d701813dea47",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2018-08-02",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "5e0f5a68-5d0c-46d1-9ae7-11f20952fbbd",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2018-08-02",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "a179ea71-c77e-4cd8-b664-bcdd9b9c39f5",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2018-07-13",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "dfe5f7a9-0f8b-4c25-bfa6-10adf535a987",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2018-07-12",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "be7373d1-522c-4e4f-b330-4fbc4385de36",
+    "code": "B61521",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2018-06-17",
+    "from": {
+      "iata": "PDX",
+      "name": "Portland Intl.",
+      "city": "Portland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        45.59000015258789,
+        -122.58999633789062
+      ]
+    },
+    "to": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "distanceKm": 1362
+  },
+  {
+    "id": "61a99155-11d5-4bbd-af33-f9cbcc0fa75f",
+    "code": "B61822",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2018-06-15",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "PDX",
+      "name": "Portland Intl.",
+      "city": "Portland",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        45.59000015258789,
+        -122.58999633789062
+      ]
+    },
+    "distanceKm": 1362
+  },
+  {
+    "id": "3ca61841-cf19-414e-a680-104771632d71",
+    "code": "UA562",
+    "airline": "United",
+    "aircraft": "A320",
+    "date": "2018-02-19",
+    "from": {
+      "iata": "DEN",
+      "name": "Denver Intl.",
+      "city": "Denver",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        39.849998474121094,
+        -104.66999816894531
+      ]
+    },
+    "to": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "distanceKm": 1358
+  },
+  {
+    "id": "dad6fe7c-a460-45de-ba17-b6f4549abdae",
+    "code": "UA809",
+    "airline": "United",
+    "aircraft": "A320",
+    "date": "2018-02-16",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.68000030517578,
+        -117.86000061035156
+      ]
+    },
+    "to": {
+      "iata": "DEN",
+      "name": "Denver Intl.",
+      "city": "Denver",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        39.849998474121094,
+        -104.66999816894531
+      ]
+    },
+    "distanceKm": 1358
+  },
+  {
+    "id": "afad483d-b3d5-48d2-9ae0-85e8ea01fe97",
+    "code": "SQ8",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-11-28",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "ICN",
+      "name": "Incheon Intl.",
+      "city": "Seoul",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "coordinates": [
+        37.45000076293945,
+        126.44999694824219
+      ]
+    },
+    "distanceKm": 4625
+  },
+  {
+    "id": "ba527a1c-8545-466c-818d-05dd8bf54d36",
+    "code": "SQ8",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-11-28",
+    "from": {
+      "iata": "ICN",
+      "name": "Incheon Intl.",
+      "city": "Seoul",
+      "country": "South Korea",
+      "countryCode": "KR",
+      "coordinates": [
+        37.45000076293945,
+        126.44999694824219
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 9627
+  },
+  {
+    "id": "a58babd0-b4c7-4e06-ae5d-081d47803bf4",
+    "code": "SQ931",
+    "airline": "Singapore Airlines",
+    "aircraft": "A333",
+    "date": "2017-11-25",
+    "from": {
+      "iata": "SUB",
+      "name": "Juanda Intl.",
+      "city": "Surabaya",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "coordinates": [
+        -7.380000114440918,
+        112.79000091552734
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 1377
+  },
+  {
+    "id": "c6d4a14f-3556-460a-a0ba-9c0a04c71ac6",
+    "code": "SQ930",
+    "airline": "Singapore Airlines",
+    "aircraft": "A333",
+    "date": "2017-11-22",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "SUB",
+      "name": "Juanda Intl.",
+      "city": "Surabaya",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "coordinates": [
+        -7.380000114440918,
+        112.79000091552734
+      ]
+    },
+    "distanceKm": 1377
+  },
+  {
+    "id": "452b665b-2722-4aea-a703-b9508a3cd73d",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-11-19",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "3b07a6ba-83ab-4fa3-a0ec-2fd8edaef867",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-11-18",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "c6aea76c-3ba1-45be-a59e-e8411bdb41e3",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-08-30",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "e6b09f03-67e3-4209-8d97-c99c50b1c449",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-08-30",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "74b28cc5-cc5b-4768-bc27-b62fe03ebcca",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-06-25",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "0c240f46-4f76-40aa-9947-67e13ee48ed7",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "B77W",
+    "date": "2017-06-17",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "80705d7f-f7af-40ff-b687-c766ec25a6f4",
+    "code": "B6405",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2016-11-27",
+    "from": {
+      "iata": "BOS",
+      "name": "Boston Logan Intl.",
+      "city": "Boston",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        42.369998931884766,
+        -71.0199966430664
+      ]
+    },
+    "to": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "distanceKm": 4176
+  },
+  {
+    "id": "6294418d-2879-4c9b-bf5a-d840e58fd167",
+    "code": "B6790",
+    "airline": "JetBlue",
+    "aircraft": "E190",
+    "date": "2016-11-27",
+    "from": {
+      "iata": "DCA",
+      "name": "Ronald Reagan Washington National",
+      "city": "Washington DC",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        38.849998474121094,
+        -77.04000091552734
+      ]
+    },
+    "to": {
+      "iata": "BOS",
+      "name": "Boston Logan Intl.",
+      "city": "Boston",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        42.369998931884766,
+        -71.0199966430664
+      ]
+    },
+    "distanceKm": 641
+  },
+  {
+    "id": "bf79772b-d932-433b-a47b-c4dba2618d8f",
+    "code": "B6255",
+    "airline": "JetBlue",
+    "aircraft": "E190",
+    "date": "2016-11-20",
+    "from": {
+      "iata": "BOS",
+      "name": "Boston Logan Intl.",
+      "city": "Boston",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        42.369998931884766,
+        -71.0199966430664
+      ]
+    },
+    "to": {
+      "iata": "DCA",
+      "name": "Ronald Reagan Washington National",
+      "city": "Washington DC",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        38.849998474121094,
+        -77.04000091552734
+      ]
+    },
+    "distanceKm": 641
+  },
+  {
+    "id": "fc78dfc1-9450-4880-8f7e-6313cdd85646",
+    "code": "B6404",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2016-11-19",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "BOS",
+      "name": "Boston Logan Intl.",
+      "city": "Boston",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        42.369998931884766,
+        -71.0199966430664
+      ]
+    },
+    "distanceKm": 4176
+  },
+  {
+    "id": "363aa81b-fea9-40f7-a7fd-ca394596dcde",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2016-06-26",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "975deef0-3a59-464a-acb8-91fafcaec144",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2016-06-16",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "bdf3b529-9104-492d-9824-93bcbc006084",
+    "code": "B61013",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2016-02-15",
+    "from": {
+      "iata": "JFK",
+      "name": "John F Kennedy",
+      "city": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.63999938964844,
+        -73.79000091552734
+      ]
+    },
+    "to": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "distanceKm": 3956
+  },
+  {
+    "id": "df6f6436-295c-41ce-a6ea-786e4b7c6169",
+    "code": "B614",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2016-02-12",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "JFK",
+      "name": "John F Kennedy",
+      "city": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.63999938964844,
+        -73.79000091552734
+      ]
+    },
+    "distanceKm": 3956
+  },
+  {
+    "id": "ab0ab472-b5fb-4edd-9c42-b32e8b2ea4e6",
+    "code": "B61013",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2015-06-21",
+    "from": {
+      "iata": "JFK",
+      "name": "John F Kennedy",
+      "city": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.63999938964844,
+        -73.79000091552734
+      ]
+    },
+    "to": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "distanceKm": 3956
+  },
+  {
+    "id": "f459be70-2b08-42d6-98a9-fd95983ee505",
+    "code": "B614",
+    "airline": "JetBlue",
+    "aircraft": "A320",
+    "date": "2015-06-12",
+    "from": {
+      "iata": "LGB",
+      "name": "Long Beach/Daugherty Field",
+      "city": "Long Beach",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.81999969482422,
+        -118.13999938964844
+      ]
+    },
+    "to": {
+      "iata": "JFK",
+      "name": "John F Kennedy",
+      "city": "New York",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        40.63999938964844,
+        -73.79000091552734
+      ]
+    },
+    "distanceKm": 3956
+  },
+  {
+    "id": "dd346217-337b-4481-ab4f-0f3f2e5d80f1",
+    "code": "AA1617",
+    "airline": "American Airlines",
+    "aircraft": "B738",
+    "date": "2015-02-16",
+    "from": {
+      "iata": "ORD",
+      "name": "Chicago O'Hare",
+      "city": "Chicago",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        41.97999954223633,
+        -87.9000015258789
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 2803
+  },
+  {
+    "id": "33effcd8-e360-4616-8b9f-7e093bb674bf",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2014-09-01",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "5c89940c-3521-4367-91fa-23a41279d26f",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2014-09-01",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "cabba0aa-bcfe-41af-8a63-a14186a168bd",
+    "code": "3K510",
+    "airline": "Jetstar Asia Airways",
+    "aircraft": "A320",
+    "date": "2014-08-23",
+    "from": {
+      "iata": "BKK",
+      "name": "Suvarnabhumi",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "countryCode": "TH",
+      "coordinates": [
+        13.6899995803833,
+        100.75
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 1417
+  },
+  {
+    "id": "b0c3980d-f264-473b-84f8-d68924c55b56",
+    "code": "3K515",
+    "airline": "Jetstar Asia Airways",
+    "aircraft": "A320",
+    "date": "2014-08-20",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "BKK",
+      "name": "Suvarnabhumi",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "countryCode": "TH",
+      "coordinates": [
+        13.6899995803833,
+        100.75
+      ]
+    },
+    "distanceKm": 1417
+  },
+  {
+    "id": "300c29f4-729e-47b5-adae-585d7029cc05",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2014-07-14",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "03b9ba24-abf7-4f63-9a3f-c3443e4561ea",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": null,
+    "date": "2014-07-13",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "143ac10a-881d-44c2-99f7-aabec93aac6f",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2012-09-02",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "distanceKm": 8753
+  },
+  {
+    "id": "5b9f599b-c83e-4e94-9808-c298e9de1303",
+    "code": "SQ12",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2012-09-02",
+    "from": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "f76d172f-ac4a-4d15-a9a6-9a728ddca4ee",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2012-08-16",
+    "from": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "to": {
+      "iata": "SIN",
+      "name": "Singapore Changi",
+      "city": "Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "coordinates": [
+        1.3600000143051147,
+        103.98999786376953
+      ]
+    },
+    "distanceKm": 5358
+  },
+  {
+    "id": "86452653-15e6-484f-8d22-4c7eea0491ef",
+    "code": "SQ11",
+    "airline": "Singapore Airlines",
+    "aircraft": "A388",
+    "date": "2012-08-15",
+    "from": {
+      "iata": "LAX",
+      "name": "Los Angeles Intl.",
+      "city": "Los Angeles",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [
+        33.939998626708984,
+        -118.41000366210938
+      ]
+    },
+    "to": {
+      "iata": "NRT",
+      "name": "Narita Intl.",
+      "city": "Tokyo",
+      "country": "Japan",
+      "countryCode": "JP",
+      "coordinates": [
+        35.77000045776367,
+        140.38999938964844
+      ]
+    },
+    "distanceKm": 8753
+  }
+]

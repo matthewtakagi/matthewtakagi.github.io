@@ -1,0 +1,26 @@
+[
+  {
+    "id": "manual-jsx-143-2027-01-18",
+    "code": "XE143",
+    "airline": "JSX",
+    "aircraft": "E145",
+    "date": "2027-01-18",
+    "from": {
+      "iata": "SNA",
+      "name": "John Wayne Airport Orange County",
+      "city": "Orange County",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [33.68000030517578, -117.86000061035156]
+    },
+    "to": {
+      "iata": "CCR",
+      "name": "Buchanan Field",
+      "city": "Concord",
+      "country": "United States",
+      "countryCode": "US",
+      "coordinates": [37.9897, -122.057]
+    },
+    "distanceKm": 610
+  }
+]
