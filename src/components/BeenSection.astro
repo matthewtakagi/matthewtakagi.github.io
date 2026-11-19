@@ -98,7 +98,7 @@ const countryId = (code: string) => `been-country-${code.toLowerCase()}`
 
 <script>
   import type { GeoJSONSource } from "maplibre-gl"
-  import type { FeatureCollection, Geometry } from "geojson"
+  import type { FeatureCollection } from "geojson"
   import boundaries from "@/data/city-boundaries.json"
   import { cities } from "@/data/travel"
   import { places } from "@/data/places"
@@ -129,7 +129,7 @@ const countryId = (code: string) => `been-country-${code.toLowerCase()}`
     }
   }
 
-  function bbox(geometry: Geometry) {
+  function bbox(geometry: { coordinates: unknown }) {
     let minLon = 180
     let maxLon = -180
     let minLat = 90
@@ -148,7 +148,7 @@ const countryId = (code: string) => `been-country-${code.toLowerCase()}`
     walk(geometry.coordinates)
     const southwest: [number, number] = [minLon, minLat]
     const northeast: [number, number] = [maxLon, maxLat]
-    return [southwest, northeast] as const
+    return [southwest, northeast]
   }
 
   function mount(root: HTMLElement) {

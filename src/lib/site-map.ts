@@ -48,7 +48,6 @@ export function createSiteMap(container: HTMLElement) {
   const map = new Map({
     container,
     style: MAP_STYLES[siteTheme()],
-    attributionControl: true,
     cooperativeGestures: true,
     dragRotate: false,
     pitchWithRotate: false,
